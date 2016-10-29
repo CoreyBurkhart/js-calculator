@@ -1,22 +1,53 @@
-$primary-color: salmon;
-$secondary-color: darken($primary-color, 15%);
+$number-color: #cfd8dc;
+$equal-color: #1de9b6;
+$operator-color: #00b0ff;
+$other-color: darken($number-color, 15%);
 
 html {
   min-height: 100%;
 }
 
 button {
-  min-width: 100px !important;
+  // min-width: 100px !important;
   min-height: 100px !important;
   font-size: 1.5rem;
+  margin: 0 .5rem 0 .5rem;
+  &.big-button {
+    margin: 0 0.30rem !important;
+  }
+  &.other {
+    background-color:  $other-color;
+  }
+  &.operator {
+    background-color: $operator-color;
+  }
+  &.number {
+    background-color: $number-color;
+  }
+  &.equal {
+    background-color: $equal-color;
+  }
 }
 
+.operator:hover {
+  background-color: darken($operator-color, 10%);
+}
+.other:hover {
+  background-color: darken($other-color, 10%);
+}
+.number:hover {
+  background-color: darken($number-color, 10%);
+}
+.equal:hover {
+  background-color: darken($equal-color, 10%);
+}
+
+
 .display {
-  background-color: lighten($primary-color, 20%);
-  margin: 0 0 1rem 0;
-  max-width: 410px;
-  min-height: 150px;
+  background-color: lighten(salmon, 20%);
+  min-height: 150px !important;
   border-radius: 2px;
+  margin:  0 0.5rem !important;
 }
 
 p {
