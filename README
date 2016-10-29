@@ -1,1 +1,7 @@
-Simple javascript calculator using materialize framework. express for local server.
+Simple javascript calculator using materialize framework.
+
+To run
+
+1) Clone repository and cd into the directory.
+2) npm install
+3) npm run deploy
