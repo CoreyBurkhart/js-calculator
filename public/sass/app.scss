@@ -10,3 +10,22 @@ button {
   min-height: 100px !important;
   font-size: 1.5rem;
 }
+
+.display {
+  background-color: lighten($primary-color, 20%);
+  margin: 0 0 1rem 0;
+  max-width: 410px;
+  min-height: 150px;
+  border-radius: 2px;
+}
+
+p {
+  margin: 0;
+  text-align: right;
+  &.current {
+    font-size: 2rem;
+  }
+  &.last {
+    font-size: 1.5rem;
+  }
+}
