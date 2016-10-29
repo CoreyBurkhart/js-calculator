@@ -1,5 +1,5 @@
 window.addEventListener('load', function(e) {
-    var userInput = ' ';
+    var userInput = ' ', answer = ' ';
     var currentInput = document.querySelector('.current');
     var lastInput = document.querySelector('.last');
 
@@ -9,7 +9,7 @@ window.addEventListener('load', function(e) {
     //when button is clicked
     //add button value to string
     function clickHandler(e, char) {
-      var notDisplayed = ['C', 'M'];
+      var notDisplayed = ['C', 'M', '='];
       char = this.innerText;
 
       if(!notDisplayed.includes(char)) {
@@ -17,7 +17,11 @@ window.addEventListener('load', function(e) {
       } else if(char === 'C') {
           userInput = ' ';
       } else if (char === 'M') {
+        //remember something
         console.log('M');
+      } else if (char = '=') {
+        answer = userInput + ' = ' + calculate(userInput);
+        console.log(answer);
       }
       displayCurrent();
     }
@@ -36,5 +40,10 @@ window.addEventListener('load', function(e) {
 
     function displayCurrent() {
       currentInput.innerText = userInput;
+      lastInput.innerText = answer;
+    }
+
+    function calculate(input) {
+      return eval(input);
     }
 });
